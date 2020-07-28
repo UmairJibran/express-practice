@@ -1,6 +1,6 @@
 //npm imports
 const Express = require("express");
-const bodyParser = require("body-parser");
+const BodyParser = require("body-parser");
 const morgan = require("morgan");
 
 //Variables
@@ -20,7 +20,7 @@ const middlewareAPI = (request, response, next) => {
 };
 
 app.use(morgan("dev")); //using morgan package to print extra information. "dev" parameter is for debugging.
-app.use(bodyParser.json()); //using bodyParser to parse json when received
+app.use(BodyParser.json()); //using bodyParser to parse json when received
 
 app.use((request, response, next) => {
    console.log(`METHOD: ${request.method}, URL: ${request.url}`);
