@@ -39,11 +39,15 @@ app.get("/profile", APICheck, (_, res) => {
 });
 app.post("/profile", (req, res) => {
    profile = req.body;
-   res.send(profile);
+   res.status(201).send(profile);
 });
 app.put("/profile", (req, res) => {
-   profile = req.body;
-   res.send(profile);
+   Object.assign(profile, req.body);
+   res.status(204).send(profile);
+});
+app.delete("/profile", (_, res) => {
+   profile = {};
+   res.status(204).send("Deleted!");
 });
 //error handlers
 
