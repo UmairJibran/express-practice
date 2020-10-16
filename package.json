@@ -11,7 +11,7 @@
    "author": "",
    "license": "ISC",
    "devDependencies": {
-      "node-dev": "5.0.0"
+      "node-dev": "6.2.0"
    },
    "dependencies": {
       "body-parser": "1.19.0",
